@@ -953,6 +953,9 @@ h6 {
 }
 
 @media screen and (max-width: 450px) {
+  .third-page {
+    height: 100%;
+  }
   .text {
     font-size: 15px;
   }
