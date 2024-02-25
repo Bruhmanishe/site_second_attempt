@@ -180,6 +180,7 @@ h6 {
   height: 250px;
 }
 .nav__menu-list span {
+  point-events: none;
   display: flex;
   align-self: center;
   justify-content: center;
