@@ -69,29 +69,9 @@ btnMenuWave.addEventListener("mousedown", (e) => {
               }
             }
           );
-          btnMenuWaveListOptns[n].addEventListener("mouseover", (e) => {
-            if (!btnMenuWaveListOptns[n].contains(linkToDiff[n])) {
-              btnMenuWaveListOptns[n].insertAdjacentElement(
-                "beforeend",
-                linkToDiff[n]
-              );
-              linkToDiff[n].classList.remove("display-none");
-            }
-            btnMenuWaveListOptns[n].addEventListener("mouseleave", (e) => {
-              if (btnMenuWaveListOptns[n].contains(linkToDiff[n])) {
-                wrapper.insertAdjacentElement("beforeend", linkToDiff[n]);
-                linkToDiff[n].classList.add("display-none");
-              }
-            });
-
-            function mouseleaveList(e) {
-              if (!linkToDiff[n].classList.contains("display-none")) {
-                linkToDiff[n].classList.add("display-none");
-              }
-            }
-            // btnMenuWaveListOptns[n].addEventListener("mouseleave", (e) => {
-            //   setTimeout(mouseleaveList, 10);
-            // });
+            btnMenuWaveListOptns[n].addEventListener("click", (e) => {
+            linkToDiff[n].classList.remove("display-none");
+            linkToDiff[n].click();
           });
         }
       }
